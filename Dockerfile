@@ -4,11 +4,9 @@ ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 
 WORKDIR /opt/
-COPY --chown=node:node package.json ./
 
 RUN npm i -g pnpm
 RUN npm install -g node-gyp
-RUN pnpm config set fetch-retry-maxtimeout 600000 -g && pnpm install
 ENV PATH=/opt/node_modules/.bin:$PATH
 
 WORKDIR /opt/app
@@ -17,6 +15,6 @@ RUN chown -R node:node /opt/app
 
 USER node
 
-RUN ["pnpm", "run", "build"]
+RUN pnpm config set fetch-retry-maxtimeout 600000 -g && pnpm install && pnpm build
 EXPOSE 1337
 CMD ["pnpm", "run", "develop"]
