@@ -1,7 +1,8 @@
 {
-  "name": "studia54",
+  "name": "str",
   "version": "0.1.0",
   "private": true,
+  "description": "A Strapi application",
   "scripts": {
     "build": "strapi build",
     "deploy": "strapi deploy",
@@ -13,25 +14,18 @@
     "@strapi/plugin-cloud": "5.8.0",
     "@strapi/plugin-users-permissions": "5.8.0",
     "@strapi/strapi": "5.8.0",
-    "better-sqlite3": "11.3.0",
-    "fs-extra": "^10.0.0",
-    "mime-types": "^2.1.27",
+    "pg": "8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
   },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "typescript": "^5"
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "fe67ee5b-dbd1-40f6-9fe2-010aed71035a"
+    "uuid": "30c0754e-06c5-491a-9106-552e88c6434f"
   }
 }
