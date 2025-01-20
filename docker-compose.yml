@@ -1,7 +1,6 @@
 services:
-  postgres:
-    image: postgres:15
-    container_name: postgres
+  strapiDB:
+    image: postgres:15-alpine
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -10,29 +9,42 @@ services:
       - postgres_data:/var/lib/postgresql/data
     ports:
       - '5432:5432'
+    networks:
+      - strapi
 
   strapi:
-    image: node:20-alpine # Используем Node.js 18 LTS
-    container_name: strapi
+    build: .
     depends_on:
-      - postgres
-    working_dir: /srv/app
+      - strapiDB
     volumes:
-      - strapi_data:/srv/app
+      - ./config:/opt/app/config
+      - ./src:/opt/app/src
+      - ./package.json:/opt/package.json
+      - ./pnpm-lock.yaml:/opt/pnpm-lock.yaml
+      - ./.env:/opt/app/.env
+      - ./public/uploads:/opt/app/public/uploads
+    networks:
+      - strapi
     ports:
       - '1337:1337'
+    env_file: .env
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
-      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_HOST: strapiDB
       DATABASE_PORT: ${DATABASE_PORT}
       DATABASE_NAME: ${DATABASE_NAME}
       DATABASE_USERNAME: ${DATABASE_USERNAME}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+      APP_KEYS: ${APP_KEYS}
       NODE_ENV: ${NODE_ENV}
-    command: sh -c "if [ ! -f package.json ]; then npx create-strapi@latest . --use-pnpm --install --typescript --no-git-init --no-example --dbclient ${DATABASE_CLIENT} --dbhost ${DATABASE_HOST} --dbport ${DATABASE_PORT} --dbname ${DATABASE_NAME} --dbusername ${DATABASE_USERNAME} --dbpassword ${DATABASE_PASSWORD} --dbssl false; fi && npm i -g pnpm && pnpm i && pnpm develop"
-    stdin_open: true
-    tty: true
 
 volumes:
   postgres_data:
   strapi_data:
+
+networks:
+  strapi:
+    name: Strapi
+    driver: bridge
