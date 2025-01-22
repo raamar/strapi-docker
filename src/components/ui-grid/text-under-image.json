@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_ui_grid_text_under_images",
+  "info": {
+    "displayName": "text-under-image",
+    "icon": "underline",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "width": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui-settings.width"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

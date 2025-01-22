@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "globals",
+  "info": {
+    "singularName": "global",
+    "pluralName": "globals",
+    "displayName": "Global",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "menu": {
+      "type": "dynamiczone",
+      "components": [
+        "ui-components.text",
+        "ui-components.button",
+        "ui-components.splitter"
+      ]
+    },
+    "copyright": {
+      "type": "string"
+    }
+  }
+}

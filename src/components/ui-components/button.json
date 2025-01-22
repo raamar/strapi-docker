@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_ui_components_buttons",
+  "info": {
+    "displayName": "button",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

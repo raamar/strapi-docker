@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_ui_blocks_hero_articles",
+  "info": {
+    "displayName": "Hero-article",
+    "icon": "earth"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "background": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

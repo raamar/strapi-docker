@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * seo controller
+ * home-page controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::seo.seo');
+module.exports = createCoreController('api::home-page.home-page');

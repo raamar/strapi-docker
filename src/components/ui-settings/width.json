@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_ui_settings_widths",
+  "info": {
+    "displayName": "width",
+    "icon": "arrowRight"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "enumeration",
+      "enum": [
+        "width=100%",
+        "width=75%",
+        "width=66%",
+        "width=50%",
+        "width=33%",
+        "width=25%"
+      ],
+      "default": "width=100%",
+      "required": true
+    }
+  }
+}

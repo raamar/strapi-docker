@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_ui_blocks_hero_mains",
+  "info": {
+    "displayName": "hero-main",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "foreground": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "decritpion": {
+      "type": "richtext",
+      "required": true
+    },
+    "action": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui-components.button"
+    }
+  }
+}

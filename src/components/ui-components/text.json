@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_ui_components_texts",
+  "info": {
+    "displayName": "Text",
+    "icon": "italic"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

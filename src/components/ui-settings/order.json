@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_ui_settings_orders",
+  "info": {
+    "displayName": "Order",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "order": {
+      "type": "enumeration",
+      "enum": [
+        "top-bottom",
+        "bottom-top"
+      ],
+      "default": "top-bottom",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_ui_grid_images",
+  "info": {
+    "displayName": "Image",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "width": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui-settings.width",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

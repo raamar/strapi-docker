@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_ui_settings_positions",
+  "info": {
+    "displayName": "Position",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "top-left",
+        "top-center",
+        "top-right",
+        "middle-left",
+        "middle-center",
+        "middle-right",
+        "bottom-left",
+        "bottom-center",
+        "bottom-right"
+      ],
+      "required": true,
+      "default": "middle-center"
+    }
+  }
+}

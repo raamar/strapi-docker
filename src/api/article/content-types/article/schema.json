@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global-components.seo"
+    },
+    "Hero": {
+      "displayName": "Hero-article",
+      "type": "component",
+      "repeatable": false,
+      "component": "ui-blocks.hero-article"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "ui-grid.text",
+        "ui-grid.text-under-image",
+        "ui-grid.text-over-image",
+        "ui-grid.image"
+      ]
+    },
+    "system_title": {
+      "type": "string",
+      "private": true
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "articles"
+    },
+    "preview": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "recommendations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_global_components_seos",
+  "info": {
+    "displayName": "seo",
+    "icon": "search"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "system_title": {
+      "type": "string",
+      "required": false
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui-blocks.hero-main",
+      "required": true
+    }
+  }
+}
